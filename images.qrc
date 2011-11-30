@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>habr_logo.png</file>
+    </qresource>
+</RCC>
