@@ -1,2 +1,4 @@
-
 .DS_Store
+moc_*.cpp
+ui_*.h
+*.o
