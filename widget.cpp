@@ -1,5 +1,6 @@
 #include "widget.h"
 #include "ui_widget.h"
+#include <QTimer>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -11,6 +12,9 @@ Widget::Widget(QWidget *parent) :
 #ifdef Q_WS_MAC
     macIntegration = new MacIntegration(this);
     connect(macIntegration, SIGNAL(dockClicked()), SLOT(show()));
+    QTimer * timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), macIntegration, SLOT(requestAttention()));
+    timer->start(5000);
 #endif
 }
 

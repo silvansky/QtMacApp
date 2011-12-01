@@ -11,6 +11,8 @@ public:
     void setDockBadge(const QString & text);
     void setDockOverlay(QWidget * overlay);
     QMenu * dockMenu();
+public slots:
+    void requestAttention();
 signals:
     void dockClicked();
 protected slots:

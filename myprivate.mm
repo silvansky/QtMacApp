@@ -195,3 +195,8 @@ void MyPrivate::setCustomTitleColor(const QColor & titleColor)
     foreach (QWidget * w, QApplication::topLevelWidgets())
         w->repaint();
 }
+
+void MyPrivate::requestAttention()
+{
+    [NSApp requestUserAttention: NSInformationalRequest];
+}

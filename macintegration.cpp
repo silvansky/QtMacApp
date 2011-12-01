@@ -55,6 +55,11 @@ QMenu * MacIntegration::dockMenu()
     return _dockMenu;
 }
 
+void MacIntegration::requestAttention()
+{
+    MyPrivate::requestAttention();
+}
+
 void MacIntegration::onCloseAction()
 {
     if (QApplication::activeWindow())

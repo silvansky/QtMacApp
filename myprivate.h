@@ -17,6 +17,7 @@ public:
     static void installCustomFrame();
     static void setCustomBorderColor(const QColor & color);
     static void setCustomTitleColor(const QColor & color);
+    static void requestAttention();
 signals:
     void dockClicked();
 };
